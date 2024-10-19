@@ -5,6 +5,7 @@
 
 ## Instructions to implement:
 1) Clone the repository
-   '''bash
-   git clone https://github.com/dylran/crowddiff.git
-   '''
+   
+```bash
+git clone https://github.com/dylran/crowddiff.git
+
