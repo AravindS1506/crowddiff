@@ -8,4 +8,13 @@
    
 ```bash
 git clone https://github.com/dylran/crowddiff.git
-
+```
+2) Create a conda environment and install the requirements.txt file
+```bash
+pip install -r requirements.txt
+```
+3) Make the model and datasets directory
+```bash
+mkdir dataset
+mkdir model
+```
