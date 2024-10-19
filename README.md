@@ -19,3 +19,7 @@ mkdir dataset
 mkdir model
 ```
 4) Download the [pre-trained checkpoints](https://drive.google.com/file/d/1dLEjaZqw9bxQm2sUU4I6YXDnFfyEHl8p/view?usp=sharing) and place it in the model folder created 
+
+5) Download the datasets and place them in the dataset folder.
+   
+6) Run the preprocessing script for each dataset using t 
