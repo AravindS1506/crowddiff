@@ -25,10 +25,10 @@ mkdrir out_dir
 5) Download the datasets and place them in the dataset folder.
    
 6) Run the preprocessing script for each dataset using the following script:
-   ```bash
-   python cc_utils/preprocess_shtech.py --data_dir  dataset --output_dir out_data --dataset shtech_A --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
-   ```
-   Replace the dataset name as required in the above code. Ensure that the dataset is organized in the format dataset/dataset_name and use --data_dir as dataset and --dataset as dataset_name.
+```bash
+python cc_utils/preprocess_shtech.py --data_dir  dataset --output_dir out_data --dataset shtech_A --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
+```
+Replace the dataset name as required in the above code. Ensure that the dataset is organized in the format dataset/dataset_name and use --data_dir as dataset and --dataset as dataset_name.
    
 8) Once preprocessing is done, place the cc_utils and guided_diffusion libraries in the folder scripts. This is required for the training and testing part of the program.
 
