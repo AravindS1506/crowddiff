@@ -47,4 +47,7 @@ Replace the dataset name accordingly. This will output the MAE and MSE after eac
 
 ### Simulations
 To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map.
-46.352 162.5
+
+46.352 81.25
+
+77.4 117.103
