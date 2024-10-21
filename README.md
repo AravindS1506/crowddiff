@@ -3,6 +3,7 @@
          [Official Implementation](https://github.com/dylran/crowddiff.git)
 
 ## Instructions to implement:
+### Pre-Process
 1) Clone the repository
    
 ```bash
@@ -19,7 +20,7 @@ mkdir dataset
 mkdir model
 mkdrir out_dir
 ```
-
+### Testing
 4) Download the [pre-trained checkpoints](https://drive.google.com/file/d/1dLEjaZqw9bxQm2sUU4I6YXDnFfyEHl8p/view?usp=sharing) and place it in the model folder created 
 
 5) Download the datasets and place them in the dataset folder.
@@ -40,5 +41,8 @@ TRAIN_FLAGS="--normalizer 0.8 --pred_channels 1 --batch_size 1 --per_samples 1"
 MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --large_size 256  --small_size 256 --learn_sigma True --noise_schedule linear --num_channels 192 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True --use_checkpoint True"
 CUDA_VISIBLE_DEVICES=0 python scripts/super_res_sample.py $DATA_DIR $LOG_DIR $TRAIN_FLAGS $MODEL_FLAGS
 ```
-Replace the dataset name accordingly
+Replace the dataset name accordingly. This will output the MAE and MSE after each image has been processed.
+
+### Simulations
+To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map.
 46.352 162.5
