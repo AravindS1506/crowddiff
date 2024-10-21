@@ -13,10 +13,11 @@ git clone https://github.com/dylran/crowddiff.git
 cd crowddiff
 pip install -r requirements.txt
 ```
-3) Make the model and datasets directory
+3) Make the model and datasets directory and pre-processed dataset library
 ```bash
 mkdir dataset
 mkdir model
+mkdr=ir out_dir
 ```
 4) Download the [pre-trained checkpoints](https://drive.google.com/file/d/1dLEjaZqw9bxQm2sUU4I6YXDnFfyEHl8p/view?usp=sharing) and place it in the model folder created 
 
