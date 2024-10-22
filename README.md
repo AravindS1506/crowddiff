@@ -7,7 +7,7 @@
 1) Clone the repository
    
 ```bash
-git clone https://github.com/dylran/crowddiff.git
+[git clone https://github.com/dylran/crowddiff.git](https://github.com/AravindS1506/Crowd-Density-Estimation-EE798R.git)
 ```
 2) Create a conda environment and install the requirements.txt file
 ```bash
