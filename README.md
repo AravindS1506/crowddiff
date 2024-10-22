@@ -2,7 +2,7 @@
 [Crowddiff Paper CVPR](https://arxiv.org/pdf/2303.12790)
          [Official Implementation](https://github.com/dylran/crowddiff.git)
          
-**Report** contains the information about implementation, datasets and results.
+**Report.pdf** contains the information about implementation, datasets and results.
 ## Instructions to implement:
 ### Pre-Process
 1) Clone the repository
