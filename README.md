@@ -27,7 +27,7 @@ mkdrir out_dir
    
 6) Run the preprocessing script for each dataset using the following script:
 ```bash
-python cc_utils/preprocess_shtech.py --data_dir  dataset --output_dir out_data --dataset shtech_A --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
+python cc_utils/preprocess_jhu.py --data_dir  dataset --output_dir out_data --dataset jhu --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
 ```
 Replace the dataset name as required in the above code. Ensure that the dataset is organized in the format dataset/dataset_name and use --data_dir as dataset and --dataset as dataset_name.
 
@@ -37,7 +37,7 @@ Replace the dataset name as required in the above code. Ensure that the dataset 
 
 9) For testing purposes, run the code
 ```bash
-DATA_DIR="--data_dir out_data/shtech_A/part_1/test/"
+DATA_DIR="--data_dir out_data/jhu/part_1/test/"
 LOG_DIR="--log_dir results --model_path model/demo.pt"
 TRAIN_FLAGS="--normalizer 0.8 --pred_channels 1 --batch_size 1 --per_samples 1"
 MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --large_size 256  --small_size 256 --learn_sigma True --noise_schedule linear --num_channels 192 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True --use_checkpoint True"
@@ -47,7 +47,3 @@ Replace the dataset name accordingly. This will output the MAE and MSE after eac
 
 ### Simulations
 To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map.
-
-46.352 81.25
-
-77.4 117.103
