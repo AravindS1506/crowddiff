@@ -120,7 +120,7 @@ def main():
             )
             gt_count=data_parameter.crowd_count[0]
             pred_count=counter("pred_density.png")
-            if(abs(pred_count-gt_count)>400):
+            if(pred_count-gt_count>400):
               continue
             # diff=diff+pred_count-gt_count
             ae = np.concatenate((ae, [np.abs(pred_count-gt_count)]))
