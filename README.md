@@ -58,4 +58,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/super_res_sample.py $DATA_DIR $LOG_DIR $TR
 ```
 
 ### Simulations
-To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map.
+To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map. Change the paths in the program accordingly
+```bash
+python merge.py
+```
