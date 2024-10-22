@@ -49,7 +49,7 @@ MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_step
 CUDA_VISIBLE_DEVICES=0 python scripts/super_res_train.py $DATA_DIR $LOG_DIR $TRAIN_FLAGS $MODEL_FLAGS
 ```
 ### Testing
-9) For testing purposes, run the code; the code below is for the jhu_crowd++ dataset. Replace the path as required. This will output the MAE and MSE after each image has been processed.
+9) For testing purposes, run the code; the code below is for the jhu_crowd++ dataset. Replace the path as required. This will output the MAE and MSE after each image has been processed. The text file "jhu_out.txt" has information about the output obtained for the jhu dataset.
 ```bash
 DATA_DIR="--data_dir out_data/jhu/part_1/test/"
 LOG_DIR="--log_dir results --model_path model/demo.pt"
