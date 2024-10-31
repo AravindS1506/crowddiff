@@ -31,5 +31,4 @@ def get_circle_count(img_path,img_path2, threshold=200, draw=True, name=None):
             # image = np.concatenate([contoursImg, threshedImg, morphImg], axis=1)
             cv2.imwrite('contour_merge.jpg', image2)
         return len(contours)
-def main():
-  print(get_circle_count("pred_density.png","out_data/shtech_A/part_1/test/1-12.jpg"))
+print(get_circle_count("pred_density.png","out_data/shtech_A/part_1/test/1-12.jpg"))
