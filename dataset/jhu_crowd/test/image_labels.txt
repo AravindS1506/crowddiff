@@ -1,0 +1,14 @@
+0003,804,street,0,0
+0007,41,street,0,0
+0009,26,street,1,0
+0011,31,stadium,0,0
+0013,5000,stadium,0,0
+0042,40,protest,0,0
+0056,1371,protest,0,0
+0058,35,concert,0,0
+0068,96,railway station,0,0
+0070,32,conference,0,0
+0085,140,concert,0,0
+0092,210,railway station,0,0
+0105,1894,concert,0,0
+0111,90,street-traffic,0,0
