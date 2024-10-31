@@ -110,7 +110,7 @@ def main():
         model_kwargs = {k: v.to(dist_util.dev()) for k, v in model_kwargs.items()}
         # model_kwargs['low_res'] = model_kwargs['low_res'][:60]
         # print(model_kwargs['low_res'].shape)
-        while data_parameter.resample:
+        for realizations in range(2):
             data_parameter.update_cycle()
             samples = diffusion.p_sample_loop(
                 model,
@@ -129,7 +129,7 @@ def main():
             # samples, count = samples
             # samples = samples["sample"]
             # data_parameter.evaluate(samples, model_kwargs)
-            break
+            # break
         if(name==""):
             name=data_parameter.name
         if(name!="" and name!=data_parameter.name):
