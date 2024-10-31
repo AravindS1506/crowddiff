@@ -31,7 +31,7 @@ mkdir out_data
    
 6) Run the preprocessing script for each dataset using the following script:
 ```bash
-python cc_utils/preprocess_jhu.py --data_dir  dataset --output_dir out_data --dataset jhu --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
+python cc_utils/preprocess_jhu.py --data_dir  dataset --output_dir out_data --dataset jhu_crowd --mode test --image_size 256 --ndevices 1 --sigma '0.5'  --kernel_size '3'
 ```
 Replace the dataset name as required in the above code. Ensure that the dataset is organized in the format dataset/dataset_name and use --data_dir as dataset and --dataset as dataset_name. "preprocess_jhu" is used for jhu_crowd++, "preprocess_ucf" is used for UCF_CC_50 and ucf_qnrf, "preprocess_shtech" is used for shtech_A and shtech_B.
 
