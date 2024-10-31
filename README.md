@@ -4,6 +4,7 @@
          
 **Report.pdf** contains the information about implementation, datasets and results.
 ## Instructions to implement:
+### Open the IPR_Aravind_Crowd.ipynb file on google colab. This has detailed instructions and steps to run the code 
 ### Pre-Process
 1) Clone the repository
    
