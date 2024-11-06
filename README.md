@@ -3,6 +3,7 @@
          [Official Implementation](https://github.com/dylran/crowddiff.git)
          
 **Report.pdf** contains the information about implementation, datasets and results.
+## Part 1
 ## Instructions to implement:
 ### Open the IPR_Aravind_Crowd.ipynb file on google colab. This has detailed instructions and steps to run the code 
 ### Pre-Process
@@ -63,4 +64,18 @@ CUDA_VISIBLE_DEVICES=0 python scripts/super_res_sample.py $DATA_DIR $LOG_DIR $TR
 To obtain a combined image with the pre-processed image and a density map, process an image using the pre-process script. Choose a single image among the ones generated from the script and run the testing script. This will save a pred_density map. Run the following code to combine the actual image and the predicted density map. Change the paths in the program accordingly
 ```bash
 python merge.py
+```
+## Part 2
+### Testing
+Follow the steps mentioned above for loading and testing the model. While testing run the following code instead
+```bash
+DATA_DIR="--data_dir out_data/jhu/part_1/test/"
+LOG_DIR="--log_dir results --model_path model/demo.pt"
+TRAIN_FLAGS="--normalizer 0.8 --pred_channels 1 --batch_size 1 --per_samples 1"
+MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --large_size 256  --small_size 256 --learn_sigma True --noise_schedule linear --num_channels 192 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True --use_checkpoint True"
+CUDA_VISIBLE_DEVICES=0 python scripts/super_res_kde.py $DATA_DIR $LOG_DIR $TRAIN_FLAGS $MODEL_FLAGS
+```
+The function used by part 2 can be obtained in the file kde_sample.py. Run the following script to get the fused image after running the testing in part 1.
+```bash
+python kde_sample.py
 ```
