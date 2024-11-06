@@ -132,8 +132,6 @@ def main():
             # diff=diff+pred_count-gt_count
             if(pred_count>50):
               pred_count=kde_real("pred_density.png",pred_count)
-            print(gt_count)
-            print(pred_count)
             ae = np.concatenate((ae, [np.abs(pred_count-gt_count)]))
             se=np.concatenate((se,[(pred_count-gt_count)**2]))
             # print(data_parameter.order)
