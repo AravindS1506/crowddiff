@@ -54,7 +54,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/super_res_train.py $DATA_DIR $LOG_DIR $TRA
 ### Testing
 9) For testing purposes, run the code; the code below is for the jhu_crowd++ dataset. Replace the path as required. This will output the MAE and MSE after each image has been processed. The text file "jhu_out.txt" has information about the output obtained for the jhu dataset.
 ```bash
-DATA_DIR="--data_dir out_data/jhu/part_1/test/"
+DATA_DIR="--data_dir out_data/jhu_crowd/part_1/test/"
 LOG_DIR="--log_dir results --model_path model/demo.pt"
 TRAIN_FLAGS="--normalizer 0.8 --pred_channels 1 --batch_size 1 --per_samples 1"
 MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --large_size 256  --small_size 256 --learn_sigma True --noise_schedule linear --num_channels 192 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True --use_checkpoint True"
@@ -70,7 +70,7 @@ python merge.py
 ### Testing
 Follow the steps mentioned above for loading and testing the model. While testing run the following code instead
 ```bash
-DATA_DIR="--data_dir out_data/jhu/part_1/test/"
+DATA_DIR="--data_dir out_data/jhu_crowd/part_1/test/"
 LOG_DIR="--log_dir results --model_path model/demo.pt"
 TRAIN_FLAGS="--normalizer 0.8 --pred_channels 1 --batch_size 1 --per_samples 1"
 MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --large_size 256  --small_size 256 --learn_sigma True --noise_schedule linear --num_channels 192 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 True --use_checkpoint True"
