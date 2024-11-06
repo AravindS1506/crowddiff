@@ -309,7 +309,8 @@ def kde_real(img_path,pred_count):
   plt.gca().invert_yaxis()
 
   # Save the figure with a DPI of 100 to ensure it's 256x256 pixels
-  plt.savefig("fused_kde_realization.png", dpi=100, bbox_inches='tight')
+  plt.savefig("fused_kde_realization_pipeline.png", dpi=100, bbox_inches='tight')
+  plt.close()
   return real_points.shape[0]
 
 def evaluate_samples(samples, model_kwargs, crowd_count, order, result, mae, dims, cycles):
