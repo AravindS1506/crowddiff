@@ -152,10 +152,10 @@ def fuse_mul(img1,img2,img3):
 
       r=(beta/2)*np.mean(distances[:, 1:], axis=1)
   return real_points.shape[0]
-img1="sample_imgs/real_1.png"
-img2="sample_imgs/real_2.png"
-img3="sample_imgs/real_3.png"
-kde_res=kde_real("sample_imgs/real_1.png")
+img1="samples_imgs/real_1.png"
+img2="samples_imgs/real_2.png"
+img3="samples_imgs/real_3.png"
+kde_res=kde_real(img1)
 diff_res=fuse_mul(img1,img2,img3)
 print(f"Samples count obtained from KDE {kde_res}")
 print(f"Sample count obtained from multiple realization {diff_res}")
