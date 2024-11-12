@@ -78,5 +78,8 @@ CUDA_VISIBLE_DEVICES=0 python scripts/super_res_kde.py $DATA_DIR $LOG_DIR $TRAIN
 ```
 The function used by part 2 can be obtained in the file kde_sample.py. Run the following script to get the fused image after running the testing in part 1.
 ```bash
+pip install opencv-python-headless numpy scikit-learn matplotlib
+```
+```bash
 python kde_sample.py
 ```
